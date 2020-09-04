@@ -4,6 +4,7 @@ import { selectUsername, selectUser } from './selectors';
 import { actions } from './slice';
 import { UserErrorType, UserInfo } from './types';
 import { message } from 'antd';
+import Endpoints from 'config/endpoints';
 
 /**
  * Github repos request/response handler
@@ -15,8 +16,7 @@ export function* getUser() {
   if (username.length === 0) {
     return;
   }
-  const requestURL = `https://jsonplaceholder.typicode.com/users/${username}`;
-
+  const requestURL = `${Endpoints.user.fetch}${username}`;
   try {
     // Call our request helper (see 'utils/request')
     if (user === null) {
