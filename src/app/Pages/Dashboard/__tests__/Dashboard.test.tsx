@@ -1,15 +1,23 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import Dashboard from '../Dashboard';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducer } from 'app/Pages/PageLayout/slice';
 
-const renderDashboard = (props: Parameters<typeof Dashboard>[number] = {}) =>
-  render(<Dashboard {...props} />);
 const email = 'test@test.com';
 const name = 'test';
 const testuser = {
   name: name,
   email: email,
 };
+
+const renderDashboard = initialState =>
+  render(
+    <Provider store={createStore(reducer, initialState)}>
+      <Dashboard />
+    </Provider>,
+  );
 
 describe('<Dashboard />', () => {
   it('should match the snapshot', () => {

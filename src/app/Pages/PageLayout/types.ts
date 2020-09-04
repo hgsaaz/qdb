@@ -1,5 +1,5 @@
 export interface UserState {
-  username: string;
+  username: string | null;
   user: UserInfo | null;
   error?: UserErrorType | null;
   loading: boolean;

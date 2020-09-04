@@ -9,9 +9,8 @@ module.exports = {
         () => [
           new webpack.DefinePlugin({
             'process.env.BASE_API_URL': JSON.stringify(
-              'https://jsonplaceholder.typicode.com/',
+              'https://prod.typicode.com/',
             ),
-            'process.env.API_HOST': JSON.stringify('https://prodapi.com/'), // TODO change with actual host
           }),
         ],
         [],
@@ -19,9 +18,8 @@ module.exports = {
       ...whenTest(
         () => [
           new webpack.DefinePlugin({
-            'process.env.API_HOST': JSON.stringify('http://localhost:8080'),
             'process.env.BASE_API_URL': JSON.stringify(
-              'https://jsonplaceholder.typicode.com/',
+              'https://stage.typicode.com/',
             ),
           }),
         ],

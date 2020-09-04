@@ -2,16 +2,18 @@ import React from 'react';
 import { Tabs, Space, Divider } from 'antd';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { UserInfo } from './styles';
-import { UserInfo as UserInterFace } from '../PageLayout/types';
+import { useSelector } from 'react-redux';
+import { selectUser } from 'app/Pages/PageLayout/selectors';
+import {
+  userAddressMDT,
+  userCompanyMDT,
+  userDetailsMDT,
+} from './helper/userMetadata';
 
 const { TabPane } = Tabs;
 
-interface Props {
-  user: UserInterFace;
-}
-
-const Dashboard = Props => {
-  const { user } = Props;
+function Dashboard() {
+  const user = useSelector(selectUser);
   const { address, company } = user || { address: null, company: null };
 
   return (
@@ -21,41 +23,50 @@ const Dashboard = Props => {
           <meta name="description" content="QDB application" />
         </Helmet>
       </HelmetProvider>
+      <h1>Dashboard</h1>
       <Tabs defaultActiveKey="1">
         <TabPane tab="OVERVIEW" key="1">
           <Space size="small" direction="vertical">
             <h3>Personal Details</h3>
-            <UserInfo>Name: {user && user.name}</UserInfo>
-            <UserInfo>Phone: {user && user.phone}</UserInfo>
-            <UserInfo>Email: {user && user.email}</UserInfo>
-            <UserInfo>Website: {user && user.website}</UserInfo>
+            {user &&
+              userDetailsMDT.map(mdt => {
+                return (
+                  <UserInfo key={mdt.key}>
+                    {mdt.label}: {user[mdt.key]}
+                  </UserInfo>
+                );
+              })}
             {address && (
               <>
                 <Divider />
                 <h3>Address</h3>
-                <UserInfo>City: {address.city}</UserInfo>
-                <UserInfo>Street: {address.street}</UserInfo>
-                <UserInfo>Zipcode: {address.zipcode}</UserInfo>
+                {userAddressMDT.map(mdt => {
+                  return (
+                    <UserInfo key={mdt.key}>
+                      {mdt.label}: {address[mdt.key]}
+                    </UserInfo>
+                  );
+                })}
               </>
             )}
             {company && (
               <>
                 <Divider />
                 <h3>Company</h3>
-                <UserInfo>{user && user.company.name}</UserInfo>
-                <UserInfo>{user && user.company.catchPhrase}</UserInfo>
+                {userCompanyMDT.map(mdt => {
+                  return (
+                    <UserInfo key={mdt.key}>
+                      {mdt.label}: {company[mdt.key]}
+                    </UserInfo>
+                  );
+                })}
               </>
             )}
           </Space>
         </TabPane>
-        <TabPane tab="EXPENSE" key="2">
-          <h3>Welcome {user && user.name}</h3>
-          <Divider />
-          <p>You can see Expense Reports here</p>
-        </TabPane>
       </Tabs>
     </>
   );
-};
+}
 
 export default Dashboard;

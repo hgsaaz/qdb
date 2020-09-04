@@ -1,15 +1,13 @@
 import React from 'react';
 import { Tabs, Divider } from 'antd';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { UserInfo as UserInterFace } from '../PageLayout/types';
+import { useSelector } from 'react-redux';
+import { selectUser } from 'app/Pages/PageLayout/selectors';
 
 const { TabPane } = Tabs;
-interface Props {
-  user: UserInterFace;
-}
 
-const Reports = Props => {
-  const { user } = Props;
+function Reports() {
+  const user = useSelector(selectUser);
   return (
     <>
       <HelmetProvider>
@@ -17,25 +15,16 @@ const Reports = Props => {
           <meta name="description" content="QDB application" />
         </Helmet>
       </HelmetProvider>
+      <h1>Reports</h1>
       <Tabs defaultActiveKey="1">
         <TabPane tab="ACTIVE REPORTS" key="1">
           <h3>Welcome {user && user.name}</h3>
           <Divider />
-          <p>You can see Active Reports here</p>
-        </TabPane>
-        <TabPane tab="CALENDER" key="2">
-          <h3>Welcome {user && user.name}</h3>
-          <Divider />
-          <p>You can see Calender Events here</p>
-        </TabPane>
-        <TabPane tab="LIVE STATS" key="3">
-          <h3>Welcome {user && user.name}</h3>
-          <Divider />
-          <p>You can see Live Stats here</p>
+          <p>User can see Active Reports here, routed to '/routes'</p>
         </TabPane>
       </Tabs>
     </>
   );
-};
+}
 
 export default Reports;

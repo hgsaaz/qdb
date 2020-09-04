@@ -1,19 +1,306 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> should render and match the snapshot 1`] = `
-<BrowserRouter>
-  <Helmet
-    defaultTitle="QDB"
-    defer={true}
-    encodeSpecialCharacters={true}
-    titleTemplate="QDB"
+.c4 {
+  padding: 30px;
+}
+
+.c0 {
+  padding: 30px;
+}
+
+.c1 {
+  text-align: center;
+}
+
+.c3 {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0;
+  margin: 0;
+  padding-top: 10pt;
+}
+
+<div
+  class="ant-spin-nested-loading"
+>
+  <div>
+    <div
+      class="ant-spin ant-spin-spinning"
+    >
+      <span
+        class="ant-spin-dot ant-spin-dot-spin"
+      >
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    class="ant-spin-container ant-spin-blur"
   >
-    <meta
-      content="QDB application"
-      name="description"
-    />
-  </Helmet>
-  <withRouter(PageLayout) />
-  <UNDEFINED />
-</BrowserRouter>
+    <div
+      class="ant-page-header site-page-header ant-page-header-ghost"
+    >
+      <div
+        class="ant-page-header-heading"
+      >
+        <div
+          class="ant-page-header-heading-left"
+        >
+          <span
+            class="ant-page-header-heading-title"
+            title="QDB"
+          >
+            QDB
+          </span>
+          <span
+            class="ant-page-header-heading-sub-title"
+            title="Welcome to QDB"
+          >
+            Welcome to QDB
+          </span>
+        </div>
+      </div>
+    </div>
+    <section
+      class="ant-layout ant-layout-has-sider"
+    >
+      <aside
+        class="c0 ant-layout-sider ant-layout-sider-dark"
+        style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
+      >
+        <div
+          class="ant-layout-sider-children"
+        >
+          <div
+            class="ant-row ant-row-center"
+            style="margin: -8px -8px 8px -8px;"
+          >
+            <div
+              class="ant-col ant-col-24 c1"
+              style="padding: 8px 8px 8px 8px;"
+            >
+              <span
+                class="ant-avatar ant-avatar-circle ant-avatar-icon"
+                style="width: 90px; height: 90px; line-height: 90px; font-size: 45px;"
+              >
+                <span
+                  aria-label="github"
+                  class="anticon anticon-github"
+                  role="img"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class=""
+                    data-icon="github"
+                    fill="currentColor"
+                    focusable="false"
+                    height="1em"
+                    viewBox="64 64 896 896"
+                    width="1em"
+                  >
+                    <path
+                      d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <div
+                class="ant-space ant-space-vertical"
+              >
+                <div
+                  class="ant-space-item"
+                  style="margin-bottom: 8px;"
+                >
+                  <p
+                    class="c2"
+                  >
+                    Hello
+                  </p>
+                </div>
+                <div
+                  class="ant-space-item"
+                  style="margin-bottom: 8px;"
+                >
+                  <p
+                    class="c3"
+                  />
+                </div>
+                <div
+                  class="ant-space-item"
+                >
+                  <button
+                    class="ant-btn ant-btn-primary"
+                    type="button"
+                  >
+                    <span
+                      aria-label="thunderbolt"
+                      class="anticon anticon-thunderbolt"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-icon="thunderbolt"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7zM378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211L378.2 732.5z"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      Live Metrices
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="ant-divider ant-divider-horizontal"
+                role="separator"
+              />
+            </div>
+            <div
+              class="ant-col ant-col-24"
+              style="padding: 8px 8px 8px 8px;"
+            >
+              <ul
+                class="ant-menu ant-menu-light ant-menu-root ant-menu-inline"
+                role="menu"
+              >
+                <li
+                  class=" ant-menu-item-group"
+                >
+                  <div
+                    class="ant-menu-item-group-title"
+                    title="Dashboard"
+                  >
+                    Dashboard
+                  </div>
+                  <ul
+                    class="ant-menu-item-group-list"
+                  >
+                    <li
+                      class="ant-menu-item ant-menu-item-only-child ant-menu-item-selected"
+                      role="menuitem"
+                      style="padding-left: 24px;"
+                    >
+                      <a
+                        href="/"
+                      >
+                        Overview
+                      </a>
+                    </li>
+                    <li
+                      class="ant-menu-item ant-menu-item-only-child"
+                      role="menuitem"
+                      style="padding-left: 24px;"
+                    >
+                      <a
+                        href="/"
+                      >
+                        Expense
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class=" ant-menu-item-group"
+                >
+                  <div
+                    class="ant-menu-item-group-title"
+                    title="Reports"
+                  >
+                    Reports
+                  </div>
+                  <ul
+                    class="ant-menu-item-group-list"
+                  >
+                    <li
+                      class="ant-menu-item ant-menu-item-only-child"
+                      role="menuitem"
+                      style="padding-left: 24px;"
+                    >
+                      <a
+                        href="/reports"
+                      >
+                        Active Reports
+                      </a>
+                    </li>
+                    <li
+                      class="ant-menu-item ant-menu-item-only-child"
+                      role="menuitem"
+                      style="padding-left: 24px;"
+                    >
+                      <a
+                        href="/reports"
+                      >
+                        Calender
+                      </a>
+                    </li>
+                    <li
+                      class="ant-menu-item ant-menu-item-only-child"
+                      role="menuitem"
+                      style="padding-left: 24px;"
+                    >
+                      <a
+                        href="/reports"
+                      >
+                        Live Stats
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section
+        class="ant-layout c4"
+      >
+        <div
+          class="ant-spin ant-spin-spinning"
+        >
+          <span
+            class="ant-spin-dot ant-spin-dot-spin"
+          >
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+          </span>
+        </div>
+      </section>
+    </section>
+  </div>
+</div>
 `;

@@ -3,12 +3,18 @@ import { Router } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import Sidebar from '../Sidebar';
 import { createMemoryHistory } from 'history';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducer } from 'app/Pages/PageLayout/slice';
+
 const history = createMemoryHistory();
-const renderSidebar = (props: Parameters<typeof Sidebar>[number] = {}) =>
+const renderSidebar = initialState =>
   render(
-    <Router history={history}>
-      <Sidebar {...props} />
-    </Router>,
+    <Provider store={createStore(reducer, initialState)}>
+      <Router history={history}>
+        <Sidebar />
+      </Router>
+    </Provider>,
   );
 const name = 'testUser';
 const testuser = {
@@ -42,10 +48,10 @@ describe('<Sidebar />', () => {
 
   it('should have props displayed', () => {
     act(() => {
-      const { queryByText } = renderSidebar({
+      const { container } = renderSidebar({
         user: testuser,
       });
-      expect(queryByText(name)).toBeInTheDocument();
+      expect(container.querySelector('h3')).toMatchSnapshot();
     });
   });
 });

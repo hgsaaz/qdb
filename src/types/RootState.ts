@@ -1,4 +1,3 @@
-import { GithubRepoFormState } from 'app/containers/GithubRepoForm/types';
 import { ThemeState } from 'styles/theme/types';
 import { UserState } from 'app/Pages/PageLayout/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
@@ -11,7 +10,6 @@ import { UserState } from 'app/Pages/PageLayout/types';
 */
 export interface RootState {
   theme?: ThemeState;
-  githubRepoForm?: GithubRepoFormState;
   user?: UserState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }
