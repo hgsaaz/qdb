@@ -3,7 +3,6 @@ import { createSlice } from 'utils/@reduxjs/toolkit';
 import { ContainerState, UserErrorType, UserInfo } from './types';
 
 export const initialState: ContainerState = {
-  username: '',
   user: null,
   error: null,
   loading: true,

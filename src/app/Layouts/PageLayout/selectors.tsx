@@ -2,7 +2,6 @@ import { createSelector } from '@reduxjs/toolkit';
 import { initialState } from './slice';
 import { RootState } from 'types';
 
-// First select the relevant part from the state
 const selectDomain = (state: RootState) => state.user || initialState;
 
 export const selectUsername = createSelector(

@@ -10,7 +10,6 @@ import Endpoints from 'config/endpoints';
  * users request/response handler
  */
 export function* getUser() {
-  // Select username from store
   const username: string = yield select(selectUsername);
   const user: UserInfo = yield select(selectUser);
   if (!username) {
