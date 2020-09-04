@@ -1,8 +1,17 @@
-export interface UserState {
-  username?: string | null;
-  user: UserInfo | null;
-  error?: UserErrorType | null;
-  loading: boolean;
+export interface UserInfo {
+  email: string;
+  id: string;
+  name: string;
+  phone: string;
+  website: string;
+  address: AddressInfo;
+  company: CompanyInfo;
+}
+
+export enum UserErrorType {
+  RESPONSE_ERROR = 1,
+  USER_NOT_FOUND = 2,
+  USERNAME_EMPTY = 3,
 }
 
 export interface AddressInfo {
@@ -19,20 +28,11 @@ export interface CompanyInfo {
   name: string;
 }
 
-export interface UserInfo {
-  email: string;
-  id: string;
-  name: string;
-  phone: string;
-  website: string;
-  address: AddressInfo;
-  company: CompanyInfo;
-}
-
-export enum UserErrorType {
-  RESPONSE_ERROR = 1,
-  USER_NOT_FOUND = 2,
-  USERNAME_EMPTY = 3,
+export interface UserState {
+  username?: string | null;
+  user: UserInfo | null;
+  error?: UserErrorType | null;
+  loading: boolean;
 }
 
 export type ContainerState = UserState;
