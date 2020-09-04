@@ -2,7 +2,7 @@ export interface UserState {
   username: string;
   user: UserInfo | null;
   error?: UserErrorType | null;
-  loading: Boolean;
+  loading: boolean;
 }
 
 export interface AddressInfo {
@@ -32,6 +32,7 @@ export interface UserInfo {
 export enum UserErrorType {
   RESPONSE_ERROR = 1,
   USER_NOT_FOUND = 2,
+  USERNAME_EMPTY = 3,
 }
 
 export type ContainerState = UserState;

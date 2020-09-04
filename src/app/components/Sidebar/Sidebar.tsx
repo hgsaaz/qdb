@@ -2,11 +2,25 @@ import React from 'react';
 import { Avatar, Row, Col, Button, Space, Divider } from 'antd';
 import 'antd/dist/antd.less';
 import { Menu } from 'antd';
-import { Link } from 'react-router-dom';
 import { ThunderboltOutlined } from '@ant-design/icons';
 import { SiderWrapper, CenterCol, UserInfo, WelcomeText } from './styles';
+import { useHistory } from 'react-router-dom';
 
-const Sidebar = props => {
+function Sidebar(props) {
+  let histroy = useHistory();
+  const handleClick = item => {
+    let path = '/';
+    if (item.key > 2) {
+      path = '/reports';
+    } else {
+      path = '/';
+    }
+
+    if (histroy.location.pathname !== path) {
+      histroy.push(path);
+    }
+  };
+
   return (
     <SiderWrapper>
       <Row gutter={[16, 16]} justify="center">
@@ -26,66 +40,21 @@ const Sidebar = props => {
           <Divider />
         </CenterCol>
         <Col span={24}>
-          <Menu defaultSelectedKeys={['1']} mode="inline">
+          <Menu defaultSelectedKeys={['1']} mode="inline" onClick={handleClick}>
             <Menu.ItemGroup key="g1" title="Dashboard">
-              <Menu.Item key="1">
-                <Link
-                  to={{
-                    pathname: '/',
-                    state: '1',
-                  }}
-                >
-                  Overview
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="2">
-                <Link
-                  to={{
-                    pathname: '/',
-                    state: '2',
-                  }}
-                >
-                  Expense
-                </Link>
-              </Menu.Item>
+              <Menu.Item key="1">Overview</Menu.Item>
+              <Menu.Item key="2">Expense</Menu.Item>
             </Menu.ItemGroup>
             <Menu.ItemGroup key="g2" title="Reports">
-              <Menu.Item key="3">
-                <Link
-                  to={{
-                    pathname: '/reports',
-                    state: '3',
-                  }}
-                >
-                  Active Reports
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="4">
-                <Link
-                  to={{
-                    pathname: '/reports',
-                    state: '4',
-                  }}
-                >
-                  Calender
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="5">
-                <Link
-                  to={{
-                    pathname: '/reports',
-                    state: '5',
-                  }}
-                >
-                  Live Stats
-                </Link>
-              </Menu.Item>
+              <Menu.Item key="3">Active Reports</Menu.Item>
+              <Menu.Item key="4">Calender</Menu.Item>
+              <Menu.Item key="5">Live Stats</Menu.Item>
             </Menu.ItemGroup>
           </Menu>
         </Col>
       </Row>
     </SiderWrapper>
   );
-};
+}
 
 export default Sidebar;

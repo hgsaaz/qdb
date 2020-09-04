@@ -21,7 +21,7 @@ const userSlice = createSlice({
       state.username = action.payload;
       state.error = null;
     },
-    repoError(state, action: PayloadAction<UserErrorType>) {
+    fetchUserError(state, action: PayloadAction<UserErrorType>) {
       state.error = action.payload;
       state.loading = false;
     },

@@ -7,13 +7,14 @@ import { message } from 'antd';
 import Endpoints from 'config/endpoints';
 
 /**
- * Github repos request/response handler
+ * users request/response handler
  */
 export function* getUser() {
   // Select username from store
   const username: string = yield select(selectUsername);
   const user: UserInfo = yield select(selectUser);
-  if (username.length === 0) {
+  if (!username) {
+    yield put(actions.fetchUserError(UserErrorType.USERNAME_EMPTY));
     return;
   }
   const requestURL = `${Endpoints.user.fetch}${username}`;
@@ -25,7 +26,7 @@ export function* getUser() {
     }
   } catch (err) {
     if (err.response?.status === 404) {
-      yield put(actions.repoError(UserErrorType.USER_NOT_FOUND));
+      yield put(actions.fetchUserError(UserErrorType.USER_NOT_FOUND));
       message.error('This is an error message');
     }
   }

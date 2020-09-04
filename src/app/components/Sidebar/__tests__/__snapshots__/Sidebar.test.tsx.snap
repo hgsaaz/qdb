@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> should match the snapshot 1`] = `
+.c0 {
+  padding: 30px;
+}
+
+.c1 {
+  text-align: center;
+}
+
+.c3 {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0;
+  margin: 0;
+  padding-top: 10pt;
+}
+
+<aside
+  class="c0 ant-layout-sider ant-layout-sider-dark"
+  style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
+>
+  <div
+    class="ant-layout-sider-children"
+  >
+    <div
+      class="ant-row ant-row-center"
+      style="margin: -8px -8px 8px -8px;"
+    >
+      <div
+        class="ant-col ant-col-24 c1"
+        style="padding: 8px 8px 8px 8px;"
+      >
+        <span
+          class="ant-avatar ant-avatar-circle ant-avatar-image"
+          style="width: 90px; height: 90px; line-height: 90px; font-size: 18px;"
+        >
+          <img
+            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
+        </span>
+        <div
+          class="ant-space ant-space-vertical"
+        >
+          <div
+            class="ant-space-item"
+            style="margin-bottom: 8px;"
+          >
+            <p
+              class="c2"
+            >
+              Hello
+            </p>
+          </div>
+          <div
+            class="ant-space-item"
+            style="margin-bottom: 8px;"
+          >
+            <p
+              class="c3"
+            >
+              testUser
+            </p>
+          </div>
+          <div
+            class="ant-space-item"
+          >
+            <button
+              class="ant-btn ant-btn-primary"
+              type="button"
+            >
+              <span
+                aria-label="thunderbolt"
+                class="anticon anticon-thunderbolt"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  class=""
+                  data-icon="thunderbolt"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7zM378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211L378.2 732.5z"
+                  />
+                </svg>
+              </span>
+              <span>
+                Live Metrices
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="ant-divider ant-divider-horizontal"
+          role="separator"
+        />
+      </div>
+      <div
+        class="ant-col ant-col-24"
+        style="padding: 8px 8px 8px 8px;"
+      >
+        <ul
+          class="ant-menu ant-menu-light ant-menu-root ant-menu-inline"
+          role="menu"
+        >
+          <li
+            class=" ant-menu-item-group"
+          >
+            <div
+              class="ant-menu-item-group-title"
+              title="Dashboard"
+            >
+              Dashboard
+            </div>
+            <ul
+              class="ant-menu-item-group-list"
+            >
+              <li
+                class="ant-menu-item ant-menu-item-only-child ant-menu-item-selected"
+                role="menuitem"
+                style="padding-left: 24px;"
+              >
+                Overview
+              </li>
+              <li
+                class="ant-menu-item ant-menu-item-only-child"
+                role="menuitem"
+                style="padding-left: 24px;"
+              >
+                Expense
+              </li>
+            </ul>
+          </li>
+          <li
+            class=" ant-menu-item-group"
+          >
+            <div
+              class="ant-menu-item-group-title"
+              title="Reports"
+            >
+              Reports
+            </div>
+            <ul
+              class="ant-menu-item-group-list"
+            >
+              <li
+                class="ant-menu-item ant-menu-item-only-child"
+                role="menuitem"
+                style="padding-left: 24px;"
+              >
+                Active Reports
+              </li>
+              <li
+                class="ant-menu-item ant-menu-item-only-child"
+                role="menuitem"
+                style="padding-left: 24px;"
+              >
+                Calender
+              </li>
+              <li
+                class="ant-menu-item ant-menu-item-only-child"
+                role="menuitem"
+                style="padding-left: 24px;"
+              >
+                Live Stats
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</aside>
+`;

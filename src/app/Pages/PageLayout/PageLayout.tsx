@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import 'antd/dist/antd.less';
 import LayoutContainer from 'app/containers/LayoutContainer/LayoutContainer';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import { NotFoundPage } from 'app/containers/NotFoundPage/Loadable';
 import { PageHeader, Layout, Spin } from 'antd';
 import Sidebar from 'app/components/Sidebar/Sidebar';
@@ -35,26 +35,26 @@ const PageLayout = () => {
       />
       <Layout>
         <Sidebar user={user} />
-        <LayoutContainer>
-          <Switch>
-            {RoutesListItems.map(route => {
-              const ContainerComponent = LoadContainer(route.component);
-              return (
-                <Route
-                  exact
-                  path={process.env.PUBLIC_URL + route.path}
-                  key={route.type}
-                >
+        <Switch>
+          {RoutesListItems.map(route => {
+            const ContainerComponent = LoadContainer(route.component);
+            return (
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + route.path}
+                key={route.type}
+              >
+                <LayoutContainer>
                   <ContainerComponent user={user} />
-                </Route>
-              );
-            })}
-            <Route component={NotFoundPage} />
-          </Switch>
-        </LayoutContainer>
+                </LayoutContainer>
+              </Route>
+            );
+          })}
+          <Route component={NotFoundPage} />
+        </Switch>
       </Layout>
     </Spin>
   );
 };
 
-export default PageLayout;
+export default withRouter(PageLayout);
