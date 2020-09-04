@@ -6,7 +6,7 @@ An application displaying User Dasboard, built with React, Redux, JavaScript, an
 
 ## Project Screen Shot(s)
 
-<img width="200" height="150" src="https://github.com/react-boilerplate/react-boilerplate-cra-template/workflows/release/badge.svg" alt="Release Status" />
+<img width="300" height="180" src="https://github.com/hgsaaz/qdb/blob/master/public/picture.png" alt="Release Status" />
 
 ## Installation and Setup Instructions
 
