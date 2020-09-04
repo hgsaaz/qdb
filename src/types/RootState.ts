@@ -1,5 +1,5 @@
 import { ThemeState } from 'styles/theme/types';
-import { UserState } from 'app/Pages/PageLayout/types';
+import { UserState } from 'app/Layouts/PageLayout/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 /* 

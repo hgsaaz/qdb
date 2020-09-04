@@ -4,7 +4,7 @@ import { SiderWrapper, CenterCol, UserInfo, WelcomeText } from './styles';
 import { Link } from 'react-router-dom';
 import { GithubOutlined } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
-import { selectUser } from 'app/Pages/PageLayout/selectors';
+import { selectUser } from 'app/Layouts/PageLayout/selectors';
 import MenuItems from './helper/menudata';
 
 function Sidebar() {

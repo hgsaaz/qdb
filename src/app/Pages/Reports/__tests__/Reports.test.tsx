@@ -3,7 +3,7 @@ import { render, act } from '@testing-library/react';
 import Reports from '../Reports';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { reducer } from 'app/Pages/PageLayout/slice';
+import { reducer } from 'app/Layouts/PageLayout/slice';
 
 const renderReports = initialState =>
   render(

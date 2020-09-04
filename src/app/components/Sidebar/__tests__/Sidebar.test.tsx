@@ -5,7 +5,7 @@ import Sidebar from '../Sidebar';
 import { createMemoryHistory } from 'history';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { reducer } from 'app/Pages/PageLayout/slice';
+import { reducer } from 'app/Layouts/PageLayout/slice';
 
 const history = createMemoryHistory();
 const renderSidebar = initialState =>

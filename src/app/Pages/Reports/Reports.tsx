@@ -2,7 +2,7 @@ import React from 'react';
 import { Tabs, Divider } from 'antd';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
-import { selectUser } from 'app/Pages/PageLayout/selectors';
+import { selectUser } from 'app/Layouts/PageLayout/selectors';
 
 const { TabPane } = Tabs;
 

@@ -14,15 +14,15 @@ import { Layout, Spin } from 'antd';
 
 import { GlobalStyle } from '../styles/global-styles';
 
-import PageLayout from './Pages/PageLayout';
+import PageLayout from './Layouts/PageLayout';
 import Sidebar from './components/Sidebar/Sidebar';
 import Routes from 'app/routes/Routes';
 
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
-import { actions, reducer, sliceKey } from 'app/Pages/PageLayout/slice';
-import { userSaga } from 'app/Pages/PageLayout/saga';
+import { actions, reducer, sliceKey } from 'app/Layouts/PageLayout/slice';
+import { userSaga } from 'app/Layouts/PageLayout/saga';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLoading } from 'app/Pages/PageLayout/selectors';
+import { selectLoading } from 'app/Layouts/PageLayout/selectors';
 
 export function App() {
   useInjectReducer({ key: sliceKey, reducer: reducer });

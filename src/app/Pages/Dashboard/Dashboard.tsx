@@ -3,7 +3,7 @@ import { Tabs, Space, Divider } from 'antd';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { UserInfo } from './styles';
 import { useSelector } from 'react-redux';
-import { selectUser } from 'app/Pages/PageLayout/selectors';
+import { selectUser } from 'app/Layouts/PageLayout/selectors';
 import {
   userAddressMDT,
   userCompanyMDT,
