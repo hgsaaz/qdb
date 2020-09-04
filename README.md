@@ -1,24 +1,14 @@
-## Project Name & Pitch
+## Project Name
 
-#### Example:
-
-TweetWorld 
+User Dashboard
 
 An application displaying User Dasboard, built with React, Redux, JavaScript, and CSS.
 
-#### Example:
-
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to sort by additional parameters is in progress.
-
 ## Project Screen Shot(s)
-
-#### Example:   
 
 <img width="200" height="150" src="https://github.com/react-boilerplate/react-boilerplate-cra-template/workflows/release/badge.svg" alt="Release Status" />
 
 ## Installation and Setup Instructions
-
-#### Example:  
 
 Clone down this repository. You will need `node` and `yarn` verion >= 1.20 installed globally on your machine.  
 
